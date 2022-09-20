@@ -1,0 +1,23 @@
+{
+  "name": "src",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "./node_modules/.bin/node-sass --watch ./style.scss -o ./style"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AnicetMaffon/Projet-3-OhMyFood.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AnicetMaffon/Projet-3-OhMyFood/issues"
+  },
+  "homepage": "https://github.com/AnicetMaffon/Projet-3-OhMyFood#readme",
+  "dependencies": {
+    "node-sass": "^7.0.3"
+  }
+}
