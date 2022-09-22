@@ -1,12 +1,16 @@
 .city {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  background-color: lightgrey;
-  text-align: center;
-  padding: 3px;
-  & i {
-    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.25rem 1rem;
+    gap: 1rem;
+    background-color: #f3f3f3;
+    text-align: center;
+    & i {
+      font-size: 1.2rem;
+    & nav  {
+      font-weight: 700;
+      font-size: 1.2rem;
+    }
   }
-}
+  }

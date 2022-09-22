@@ -1,9 +1,12 @@
 .header {
+  padding: 3px;
   position: relative;
-  padding: 30px;
+  z-index: 1000;
   text-align: center;
-  box-shadow: 0 0 0.3rem 1px #f3f3f3;
+  font-family: "shrikhand", cursive;
+  box-shadow: 0.25rem 0.25rem 10px #d8c6c6;
 }
+
 .logo {
-  width: 50%;
+  max-width: 60%;
 }
