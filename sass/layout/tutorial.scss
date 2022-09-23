@@ -1,0 +1,46 @@
+@use "../utils/zoom.transform";
+@use "../utils/box-shadow.basic-shadow";
+@use "../utils/variables.";
+@use "../utils/colors.";
+
+
+.tutorial {
+  counter-reset: steps;
+  & ol {
+    display: flex;
+    gap: 2rem;
+    @media (max-width: 1000px) {
+      flex-direction: column;
+    }
+  }
+  & li {
+    &::before {
+      content: counter(steps);
+      counter-increment: steps;
+      color: #f6f6f6;
+      background-color: colors.$purple;
+      display: grid;
+      width: 2 * variable.$tuto-height;
+      height: 2 * variable.$tuto-height;
+      place-items: center;
+      border-radius: 50%;
+      position: absolute;
+      bottom: variable.$tuto-height;
+      left: -1 * variable.$tuto-height;
+    }
+    list-style-type: none;
+    background-color: #f6f6f6;
+    padding: 1.5rem 2rem;
+    flex-grow: 1;
+    border-radius: 1rem;
+    @include box-shadow.basic-shadow;
+    &:hover {
+      @include zoom.transform-zoom;
+    }
+    & i.fas {
+      margin-right: 1rem;
+      color:$lightgrey;
+      font-size: 1.5rem;
+    }
+  }
+}

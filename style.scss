@@ -1,4 +1,5 @@
-@import "./sass/base.";
-@import "./sass/layout/header.";
-@import "./sass/layout/city.";
-@import "./sass/layout/explore."
+@use "./sass/base.scss";
+@use "./sass/layout/header.scss";
+@use "./sass/layout/city.scss";
+@use "./sass/layout/explore.scss";
+@use "./sass/layout/tutorial.scss";

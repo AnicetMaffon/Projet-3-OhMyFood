@@ -1,0 +1,12 @@
+.tutorial ol {
+  display: flex;
+  gap: 2rem; }
+  @media (max-width: 800px) {
+    .tutorial ol {
+      flex-direction: column; } }
+
+.tutorial li {
+  background-color: #f6f6f6;
+  padding: 1rem 2rem;
+  flex-grow: 1;
+  border-radius: 1rem; }
