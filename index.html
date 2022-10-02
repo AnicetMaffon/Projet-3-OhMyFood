@@ -10,7 +10,7 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="./style/style.css" />
-    <link rel="stylesheet" href=".style/tutorial.css">
+    <link rel="stylesheet" href=".style/tutorial.css" />
   </head>
   <body>
     <!-- Header -->
@@ -31,23 +31,41 @@
       </section>
       <!-- Explore -->
       <section class="explore">
-        <h2>
+        <h2 class="explore__title">
           Réservez le menu qui<br />
           vous convient
         </h2>
-        <p>Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
-        <button>Explorer nos restaurants</button>
+        <p class="explore__subtitle">Découvrez des restaurants d'exception, sélectionnés par nos soins</p>
+        <a class="explore__btn">Explorer nos restaurants</a>
       </section>
 
       <section class="tutorial">
-        <h2>Fonctionnement</h2>
-        <ol>
-          <li><i class="fas fa-mobile-alt"></i>Choisissez un restaurant</li>
-          <li><i class="fas fa-list-ul"></i>Composez votre menu</li>
-          <li><i class="fas fa-store"></i>Dégustez au restaurant</li>
+        <div class="container">
+          
+        <h2 class="tutorial__title">Fonctionnement</h2>
+        <ol class="tutorial__steps">
+          <li class="tutorial__step">
+            <i class="fas fa-mobile-alt"></i>
+            Choisissez un restaurant
+          </li>
+          <li class="tutorial__step">
+            <i class="fas fa-list-ul"></i>Composez votre menu
+          </li>
+          <li class="tutorial__steps">
+            <i class="fas fa-store"></i>Dégustez au restaurant
+          </li>
         </ol>
+        </div>
+
       </section>
 
+      <section class="dishes">
+        <h2>Restaurant</h2>
+        <div class="card">Restaurant</div>
+        <div class="card">Restaurant2</div>
+        <div class="card">Restaurant3</div>
+        <div class="card">Restaurant4</div>
+      </section>
     </main>
   </body>
 </html>

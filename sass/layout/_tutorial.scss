@@ -1,0 +1,59 @@
+@import "../utils/_zoom";
+@import "../utils/_box-shadow";
+@import "../utils/_variables";
+@import "../utils/_colors";
+// primary-color #9356DC secondary-color #FF79DA tertiary-color #99E2D0
+
+.container {
+  max-width: 1280px;
+  margin: auto;
+  position: relative;
+
+}
+.tutorial {
+ padding: 2rem 1rem;
+  & ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: steps;
+    @media (max-width: 1000px) {
+      flex-direction: column;
+    }
+  }
+  & li {
+    padding: 1rem;
+    border-radius: 1.25rem;
+      position: relative;
+      margin: 1rem 0 1rem 0.75rem;
+      // list-style-type: none;
+     background-color: #f6f6f6;
+     display: flex;
+    // padding: 1.5rem 2rem;
+    // flex-grow: 1;
+    // border-radius: 1rem;
+    @include basic-shadow;
+    &:hover {
+      @include transform-_zoom;
+    }
+    &::before {
+      counter-increment: steps 1;
+      content: counter(steps ) "";
+      background: #9356dc;;
+      color: #fff;
+      display:grid;
+      place-items: center;
+       width: 1.5 * $tuto-height;
+       height: 1.5 * $tuto-height;
+      position: absolute;
+      border-radius: 100px;
+       left: -0.75 * $tuto-height;
+    }
+    
+    & i.fas {
+      margin: 0 1rem;
+      color: #7c7c7c;
+      font-size: 1rem;
+    }
+  }
+}

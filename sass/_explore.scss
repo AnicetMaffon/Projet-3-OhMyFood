@@ -1,20 +1,24 @@
-@use "../utils/box-shadow.scss";
+@import "./utils/_box-shadow.scss";
 
 .explore {
   text-align: center;
-  padding: 1.5rem 0;
+  padding: 2rem;
+  background-color: #fafafa;
   & h2 {
     margin-top: 20px;
   }
   & p {
     font-size: 1rem;
-  } & button {
-    color: white;
-    font-weight: 500;
+    font-weight: 300;
+    margin:1.5rem 0;
+  }
+  & a {
+    color:#fff;
+    font-weight: 400;
     font-size: 1.2rem;
     background-color: #686868;
-    padding: 0.75rem 1.5rem;
-    border: none;
+    padding: 0.50rem 1rem;
+    border: 0;
     border-radius: 20px;
     margin-top: 10px;
     cursor: pointer;
@@ -25,12 +29,11 @@
       #cf64dc,
       #e86edb,
       #ff79da
-      );
-      @include box-shadow.basic-shadow;
-    }  
-    & button:hover {
-      transform: scale(1.05);
-      opacity: 0.9;
-    }
+    );
+    @include basic-shadow;
   }
-    
+  & button:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+}

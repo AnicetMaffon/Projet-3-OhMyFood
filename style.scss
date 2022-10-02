@@ -1,5 +1,6 @@
-@use "./sass/base.scss";
-@use "./sass/layout/header.scss";
-@use "./sass/layout/city.scss";
-@use "./sass/layout/explore.scss";
-@use "./sass/layout/tutorial.scss";
+@import "./sass/base.scss";
+@import "./sass/layout/header.scss";
+@import "./sass/layout/city.scss";
+@import "./sass/_explore.scss";
+@import "./sass/layout/tutorial.scss";
+@import "./sass/layout/dishes.scss";

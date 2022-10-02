@@ -1,5 +1,115 @@
-@use "./sass/base.scss";
-@use "./sass/layout/header.scss";
-@use "./sass/layout/city.scss";
-@use "./sass/layout/explore.scss";
-@use "./sass/layout/tutorial.scss";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Shrikhand&display=swap");
+* {
+  box-sizing: border-box; }
+
+::before,
+::after {
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif; }
+
+main {
+  padding: 0; }
+
+.header {
+  padding: 3px;
+  position: relative;
+  z-index: 1000;
+  text-align: center;
+  font-family: "shrikhand", cursive;
+  box-shadow: 0.25rem 0.25rem 10px #d8c6c6; }
+
+.logo {
+  max-width: 60%; }
+
+.city {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem 1rem;
+  gap: 1rem;
+  background-color: #f3f3f3;
+  text-align: center; }
+  .city i {
+    font-size: 1.2rem; }
+    .city i nav {
+      font-weight: 700;
+      font-size: 1.2rem; }
+
+.explore {
+  text-align: center;
+  padding: 2rem;
+  background-color: #fafafa; }
+  .explore h2 {
+    margin-top: 20px; }
+  .explore p {
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 1.5rem 0; }
+  .explore a {
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.2rem;
+    background-color: #686868;
+    padding: 0.50rem 1rem;
+    border: 0;
+    border-radius: 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    background-image: linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da);
+    box-shadow: 0.25rem 0.25rem 10px #656363; }
+  .explore button:hover {
+    transform: scale(1.05);
+    opacity: 0.9; }
+
+.container {
+  max-width: 1280px;
+  margin: auto;
+  position: relative; }
+
+.tutorial {
+  padding: 2rem 1rem; }
+  .tutorial ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: steps; }
+    @media (max-width: 1000px) {
+      .tutorial ol {
+        flex-direction: column; } }
+  .tutorial li {
+    padding: 1rem;
+    border-radius: 1.25rem;
+    position: relative;
+    margin: 1rem 0 1rem 0.75rem;
+    background-color: #f6f6f6;
+    display: flex;
+    box-shadow: 0.25rem 0.25rem 10px #656363; }
+    .tutorial li:hover {
+      transform: scale(1.02); }
+    .tutorial li::before {
+      counter-increment: steps 1;
+      content: counter(steps) "";
+      background: #9356dc;
+      color: #fff;
+      display: grid;
+      place-items: center;
+      width: 1.5rem;
+      height: 1.5rem;
+      position: absolute;
+      border-radius: 100px;
+      left: -0.75rem; }
+    .tutorial li i.fas {
+      margin: 0 1rem;
+      color: #7c7c7c;
+      font-size: 1rem; }
+
+.dishes {
+  background-color: #f6f6f6; }
+  .dishes .dishes__card {
+    display: flex;
+    gap: 2rem; }
+  .dishes .card {
+    height: 3 rem; }
