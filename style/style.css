@@ -70,46 +70,132 @@ main {
   position: relative; }
 
 .tutorial {
-  padding: 2rem 1rem; }
+  padding: 1rem 0.5rem; }
   .tutorial ol {
     margin: 0;
     padding: 0;
     list-style: none;
     counter-reset: steps; }
-    @media (max-width: 1000px) {
+    @media (min-width: 768px) {
       .tutorial ol {
-        flex-direction: column; } }
-  .tutorial li {
-    padding: 1rem;
-    border-radius: 1.25rem;
-    position: relative;
-    margin: 1rem 0 1rem 0.75rem;
-    background-color: #f6f6f6;
-    display: flex;
-    box-shadow: 0.25rem 0.25rem 10px #656363; }
-    .tutorial li:hover {
-      transform: scale(1.02); }
-    .tutorial li::before {
-      counter-increment: steps 1;
-      content: counter(steps) "";
-      background: #9356dc;
-      color: #fff;
-      display: grid;
-      place-items: center;
-      width: 1.5rem;
-      height: 1.5rem;
-      position: absolute;
-      border-radius: 100px;
-      left: -0.75rem; }
-    .tutorial li i.fas {
-      margin: 0 1rem;
-      color: #7c7c7c;
-      font-size: 1rem; }
+        display: flex;
+        flex-direction: row;
+        flex-grow: 1;
+        gap: 2rem; } }
+    .tutorial ol li {
+      margin-top: 0;
+      padding: 1rem;
+      border-radius: 1.25rem;
+      position: relative;
+      margin: 1.5rem 0;
+      background-color: #f6f6f6;
+      display: flex;
+      flex-direction: row;
+      box-shadow: 0.25rem 0.25rem 10px #656363; }
+      @media (min-width: 768px) {
+        .tutorial ol li {
+          margin-left: 0.75rem;
+          width: 30%; } }
+      @media (min-width: 1024px) {
+        .tutorial ol li {
+          flex: 1;
+          margin: 0 0 0 1rem; } }
+      .tutorial ol li > i {
+        margin: 0 1rem;
+        color: #7c7c7c;
+        font-size: 1rem; }
+      .tutorial ol li::before {
+        counter-increment: steps 1;
+        content: counter(steps) "";
+        background: #9356dc;
+        color: #fff;
+        display: grid;
+        place-items: center;
+        width: 1.5rem;
+        height: 1.5rem;
+        position: absolute;
+        border-radius: 100px;
+        left: -0.75rem; }
+        .tutorial ol li::before:hover {
+          transform: scale(1.02); }
 
-.dishes {
-  background-color: #f6f6f6; }
-  .dishes .dishes__card {
-    display: flex;
-    gap: 2rem; }
-  .dishes .card {
-    height: 3 rem; }
+.restaurants {
+  background-color: #f6f6f6;
+  padding: 2rem 1rem; }
+  .restaurants .cards {
+    display: grid;
+    column-gap: 2rem;
+    row-gap: 2rem; }
+    @media (min-width: 64rem) {
+      .restaurants .cards {
+        grid-template-columns: repeat(2, 1fr); } }
+  .restaurants .card {
+    background-color: #fff;
+    border-radius: 1rem;
+    position: relative;
+    text-decoration: none;
+    color: inherit;
+    display: block; }
+    .restaurants .card img {
+      height: 12rem;
+      width: 100%;
+      border: 0 solid transparent;
+      border-radius: 1rem 1rem 0 0;
+      box-shadow: none;
+      object-fit: cover; }
+    .restaurants .card .card__badge {
+      background-color: #99e2d0;
+      color: #1b6150;
+      padding: 0.5rem;
+      border-radius: 0.125rem;
+      position: absolute;
+      top: 1rem;
+      right: 0.75rem; }
+    .restaurants .card .card__subtitle {
+      background-color: #fff;
+      border-radius: 1rem;
+      position: relative;
+      text-decoration: none; }
+    .restaurants .card .card__content {
+      flex: 1; }
+    .restaurants .card .card__footer {
+      padding: 1rem;
+      position: relative;
+      display: flex;
+      align-items: center; }
+    .restaurants .card .menu__like {
+      transition-duration: .25s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      mix-blend-mode: lighten; }
+
+.footer {
+  background-color: #353535; }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem; }
+
+.footer__logo {
+  color: #fff;
+  font-family: Shrikhand,"cursive";
+  font-size: 1.2rem;
+  margin: 0 0 1rem; }
+
+.footer__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #fff; }
+
+.footer__list:first-child {
+  margin-top: 0; }
+
+.footer__list {
+  margin: 0.5rem 0; }
+
+.footer__link {
+  color: #fff;
+  text-decoration: none; }
