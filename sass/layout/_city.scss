@@ -6,11 +6,12 @@
     gap: 1rem;
     background-color: #f3f3f3;
     text-align: center;
-    & i {
-      font-size: 1.2rem;
-    & nav  {
+    .cityText  {
       font-weight: 700;
       font-size: 1.2rem;
    }
+    & i {
+      font-size: 1.2rem;
+   
   }
 }

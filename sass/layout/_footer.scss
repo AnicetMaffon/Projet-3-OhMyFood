@@ -1,5 +1,7 @@
+@import "./sass/utils/colors.scss";
+
 .footer {
-    background-color: #353535;
+    background-color: $background-tertiary;
 }
 .container {
     display: flex;
@@ -7,7 +9,7 @@
     padding: 1rem;
 }
 .footer__logo {
-    color: #fff;
+    color:$background;
     font-family: Shrikhand,"cursive";
     font-size: 1.2rem;
     margin: 0 0 1rem;
@@ -16,7 +18,7 @@
     list-style: none;
     padding: 0;
     margin: 0;
-    color: #fff;
+    color:$background;
 }
 .footer__list:first-child {
     margin-top: 0;
@@ -26,6 +28,6 @@
     margin: 0.5rem 0;
 }
 .footer__link {
-    color: #fff;
+    color:$background;
     text-decoration: none;
 }

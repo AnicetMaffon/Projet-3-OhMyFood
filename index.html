@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Oh My Food</title>
+    <title>Ohmyfood</title>
     <script
       src="https://kit.fontawesome.com/0d3f5f397c.js"
       crossorigin="anonymous"
@@ -14,11 +14,11 @@
   </head>
   <body>
     <!-- Header -->
-    <header class="header">
+    <header class="headerMain">
       <h1 class="headerLogo">
         <img
-          class="logo"
-          src="./images/logo/ohmyfood.png"
+          class="header__logo1"
+          src="./assets/logo/ohmyfood.png"
           alt="logo ohmyfood"
         />
       </h1>
@@ -63,9 +63,9 @@
         <div class="container">
           <h2 class="restaurant__title">Restaurants</h2>
           <div class="cards">
-            <a href="la-palette-du-gout.html" class="card">
+            <a href="assets/pages/la-palette-du-gout.html" class="card">
               <img
-                src="/images/restaurants/La palette du goût.jpg"
+                src="/assets/restaurants/la-palette-du-gout.jpg"
                 alt="Image d'un restaurant à Ménilmontant"
                 class="card__img"
               />
@@ -76,20 +76,15 @@
                   <span class="card__subtitle">Ménilmontant</span>
                 </div>
                 <div class="card__btn menu__btn">
-                  <i
-                    class="card__like fa-2x fa-heart far menu__like menu__like--noBg"
-                    aria-hidden="true"
-                  ></i>
-                  <i
-                    class="card__like fa-2x fa-heart fas menu__like menu__like--bg"
-                    aria-hidden="true"
-                  ></i>
+                  <i class="card__like far fa-heart">
+                    <i class="card__like fas fa-heart"></i>
+                  </i>
                 </div>
               </footer>
             </a>
-            <a href="la-note-enchantée.html" class="card">
+            <a href="assets/pages/la-note-enchantee.html" class="card">
               <img
-                src="/images/restaurants/La note enchantée.jpg"
+                src="/assets/restaurants/la-note-enchantee.jpg"
                 alt="Image d'un restaurant à Charonne"
                 class="card__img"
               />
@@ -100,20 +95,14 @@
                   <span class="card__subtitle">Charonne</span>
                 </div>
                 <div class="card__btn menu__btn">
-                  <i
-                    class="card__like fa-2x fa-heart far menu__like menu__like--noBg"
-                    aria-hidden="true"
-                  ></i>
-                  <i
-                    class="card__like fa-2x fa-heart fas menu__like menu__like--bg"
-                    aria-hidden="true"
-                  ></i>
+                  <i class="card__like far fa-heart"></i>
+                  <i class="card__like fas fa-heart"></i>
                 </div>
               </footer>
             </a>
-            <a href="a-la-francaise.html" class="card">
+            <a href="assets/pages/A-la-francaise.html" class="card">
               <img
-                src="/images/restaurants/A la française.jpg"
+                src="/assets/restaurants/A-la-francaise.jpg"
                 alt="Image d'un restaurant à Cité Rouge"
               />
               <footer class="card__footer">
@@ -122,20 +111,14 @@
                   <span class="card__subtitle">Cité Rouge</span>
                 </div>
                 <div class="card__btn menu__btn">
-                  <i
-                    class="card__like fa-2x fa-heart far menu__like menu__like--noBg"
-                    aria-hidden="true"
-                  ></i>
-                  <i
-                    class="card__like fa-2x fa-heart fas menu__like menu__like--bg"
-                    aria-hidden="true"
-                  ></i>
+                  <i class="card__like far fa-heart"></i>
+                  <i class="card__like fas fa-heart"></i>
                 </div>
               </footer>
             </a>
-            <a href="le-delice-des-sens.html" class="card">
+            <a href="assets/pages/le-delice-des-sens.html" class="card">
               <img
-                src="/images/restaurants/Le délice des sens.jpg"
+                src="/assets/restaurants/le-delice-des-sens.jpg"
                 alt="Image d'un restaurant à Folie-Méricourt"
               />
               <footer class="card__footer">
@@ -144,14 +127,8 @@
                   <span class="card__subtitle">Folie-Méricourt</span>
                 </div>
                 <div class="card__btn menu__btn">
-                  <i
-                    class="card__like fa-2x fa-heart far menu__like menu__like--noBg"
-                    aria-hidden="true"
-                  ></i>
-                  <i
-                    class="card__like fa-2x fa-heart fas menu__like menu__like--bg"
-                    aria-hidden="true"
-                  ></i>
+                  <i class="card__like far fa-heart"></i>
+                  <i class="card__like fas fa-heart"></i>
                 </div>
               </footer>
             </a>
@@ -182,7 +159,9 @@
             <a href="#" class="footer__link">Mentions légales</a>
           </li>
           <li class="footer__list">
-            <a href="#" class="footer__link"> Contact</a>
+            <a href="mailto:contact@ohmyfood.com" class="footer__link">
+              Contact</a
+            >
           </li>
         </ul>
       </div>
