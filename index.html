@@ -10,7 +10,6 @@
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="./style/style.css" />
-    <link rel="stylesheet" href=".style/tutorial.css" />
   </head>
   <body>
     <!-- Header -->
@@ -26,7 +25,7 @@
     <main>
       <!-- City -->
       <section class="city">
-        <i class="fa-solid fa-location-dot"></i>
+        <i class="fa solid fa-location-dot"></i>
         <span class="cityText">Paris, Belleville</span>
       </section>
       <!-- Explore -->
@@ -63,75 +62,97 @@
         <div class="container">
           <h2 class="restaurant__title">Restaurants</h2>
           <div class="cards">
-            <a href="assets/pages/la-palette-du-gout.html" class="card">
-              <img
-                src="/assets/restaurants/la-palette-du-gout.jpg"
-                alt="Image d'un restaurant à Ménilmontant"
-                class="card__img"
-              />
+            <article class="card">
+              <a href="assets/pages/la-palette-du-gout.html" class="cardAnchor">
+                <img
+                  src="/assets/restaurants/la-palette-du-gout.jpg"
+                  alt="Image d'un restaurant à Ménilmontant"
+                  class="card__img"
+                />
+              </a>
+
               <span class="card__badge">Nouveau</span>
-              <footer class="card__footer">
+              <div class="card__footer">
                 <div class="card__content">
-                  <h3 class="card__title">La palette du goût</h3>
+                  <a href="assets/pages/la-palette-du-gout.html" class="cardTitle">
+                    <h3 class="card__title">La palette du goût</h3>
+                  </a>
+
                   <span class="card__subtitle">Ménilmontant</span>
                 </div>
                 <div class="card__btn menu__btn">
-                  <i class="card__like far fa-heart">
+                  <i class="card__like far fa-heart"></i>
+                  <i class="card__like fas fa-heart"> </i>
+                </div>
+              </div>
+            </article>
+
+            <article class="card">
+              <a href="assets/pages/la-note-enchantee.html" class="cardAnchor">
+                <img
+                  src="/assets/restaurants/la-note-enchantee.jpg"
+                  alt="Image d'un restaurant à Charonne"
+                  class="card__img"
+                /></a>
+                <span class="card__badge">Nouveau</span>
+                <div class="card__footer">
+                  <div class="card__content">
+                    <a href="assets/pages/la-note-enchantee.html" class="cardTitle">
+                      <h3 class="card__title">La note enchantée</h3>
+                    </a>
+                    
+                    <span class="card__subtitle">Charonne</span>
+                  </div>
+                  <div class="card__btn menu__btn">
+                    <i class="card__like far fa-heart"></i>
                     <i class="card__like fas fa-heart"></i>
-                  </i>
+                  </div>
                 </div>
-              </footer>
-            </a>
-            <a href="assets/pages/la-note-enchantee.html" class="card">
-              <img
-                src="/assets/restaurants/la-note-enchantee.jpg"
-                alt="Image d'un restaurant à Charonne"
-                class="card__img"
-              />
-              <span class="card__badge">Nouveau</span>
-              <footer class="card__footer">
-                <div class="card__content">
-                  <h3 class="card__title">La note enchantée</h3>
-                  <span class="card__subtitle">Charonne</span>
-                </div>
-                <div class="card__btn menu__btn">
-                  <i class="card__like far fa-heart"></i>
-                  <i class="card__like fas fa-heart"></i>
-                </div>
-              </footer>
-            </a>
-            <a href="assets/pages/A-la-francaise.html" class="card">
-              <img
-                src="/assets/restaurants/A-la-francaise.jpg"
-                alt="Image d'un restaurant à Cité Rouge"
-              />
-              <footer class="card__footer">
-                <div class="card__content">
-                  <h3 class="card__title">A la française</h3>
-                  <span class="card__subtitle">Cité Rouge</span>
-                </div>
-                <div class="card__btn menu__btn">
-                  <i class="card__like far fa-heart"></i>
-                  <i class="card__like fas fa-heart"></i>
-                </div>
-              </footer>
-            </a>
+              
+            </article>
+<article class="card">
+  <a href="assets/pages/A-la-francaise.html" class="cardAnchor">
+    <img
+      src="/assets/restaurants/A-la-francaise.jpg"
+      alt="Image d'un restaurant à Cité Rouge"
+    /> </a>
+    <div class="card__footer">
+      <div class="card__content">
+        <a href="assets/pages/A-la-francaise.html" class="cardTitle">
+          <h3 class="card__title">A la française</h3>
+        </a>
+       
+        <span class="card__subtitle">Cité Rouge</span>
+      </div>
+      <div class="card__btn menu__btn">
+        <i class="card__like far fa-heart"></i>
+        <i class="card__like fas fa-heart"></i>
+      </div>
+    </div>
+</article>
+              
+           <article class="card">
             <a href="assets/pages/le-delice-des-sens.html" class="card">
               <img
                 src="/assets/restaurants/le-delice-des-sens.jpg"
                 alt="Image d'un restaurant à Folie-Méricourt"
               />
-              <footer class="card__footer">
+            </a>
+              <div class="card__footer">
                 <div class="card__content">
-                  <h3 class="card__title">Le délice des sens</h3>
+                  <a href="assets/pages/le-delice-des-sens.html" class="cardTitle">
+                    <h3 class="card__title">Le délice des sens</h3>
+                  </a>
                   <span class="card__subtitle">Folie-Méricourt</span>
                 </div>
                 <div class="card__btn menu__btn">
                   <i class="card__like far fa-heart"></i>
                   <i class="card__like fas fa-heart"></i>
                 </div>
-              </footer>
-            </a>
+              </div>
+           
+           </article>
+           
           </div>
         </div>
       </section>

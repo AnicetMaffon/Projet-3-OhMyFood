@@ -1,9 +1,11 @@
+// @import "./utils/linear-gradient.scss";
+
 .restaurants {
- background-color: $background-secondary;
+  background-color: $background-secondary;
   padding: 2rem 1rem;
 
   .cards {
-    @media (min-width: 64rem) {
+    @media (min-width: 1024px) {
       grid-template-columns: repeat(2, 1fr);
     }
     display: grid;
@@ -11,11 +13,13 @@
     row-gap: 2rem;
   }
 
-  .card {
+  .cardAnchor, .card {
     background-color: $background;
     border-radius: 1rem;
     position: relative;
     text-decoration: none;
+    color: inherit;
+    display: block;
 
     & img {
       height: 12rem;
@@ -35,7 +39,10 @@
       top: 1rem;
       right: 0.75rem;
     }
-
+    .cardTitle{
+      text-decoration: none;
+      color: #000;
+    }
     .card__subtitle {
       background-color: $background;
       border-radius: 1rem;
@@ -62,48 +69,34 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    cursor:pointer;
-  
+    cursor: pointer;
+    position: relative;
+    background-color: #000;
   }
-& i{
-  font-size: 2rem;
-  right: 1rem;
-  top:50%;
-  transform: translateY(-50%);
-  
-}
-  
-  .fas {
+
+  & i {
     height: 2rem;
     width: 2rem;
-    transition-duration: 0.25s;
+    font-size: 2rem;
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: absolute;
-    mix-blend-mode: lighten;
-    color: transparent;
-    @include gradient;
-    background-clip: text;
-    -webkit-background-clip: text;
-    opacity: 0;
+  }
+  .fas {
     transition: all 200ms ease-in-out;
-  }
-    .far{
-        transition-duration: .25s;
-        background-color: $background-secondary;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-         mix-blend-mode: lighten;
+    color: transparent;
+
+    &:hover {
+      background: linear-gradient(90deg, rgba(147, 86, 220,1) 0%,rgba (255,121,218,1) 100%);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
-    .menu__btn:before, .menu__like {
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 100%;
-      width: 100%;
   }
-  
-}   
-  
+  .far {
+    background: $background-secondary;
+    opacity: 1;
+  }
+
+ 
+}

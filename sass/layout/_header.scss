@@ -1,1 +1,46 @@
 @import "./sass/utils/box-shadow.scss";
+.headerLogo {
+    font-family: Shrikhand, "cursive";
+    margin: 0;
+    text-align: center;
+    @include basic-shadow;
+    position: relative;
+    z-index: 1000;
+  }
+  .header__logo1 {
+    padding: 1.5rem;
+    max-width: 60%;
+  }
+  .header--leftArrow{
+    position: relative;
+  }
+  .header__arrow {
+    font-size: 1.5rem;
+    position: absolute;
+    left: 2rem;
+    height: 2rem;
+    width: 2rem;
+    top: 50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    transform: translateY(-50%);
+    font-size: 1.2rem;
+    color: black;
+  }
+  .header__logoDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header__logo {
+    font-family: Shrikhand, "cursive";
+    text-align: center;
+    max-width: 60%;
+    padding: 1rem;
+  }
+
+
+
+  
+   

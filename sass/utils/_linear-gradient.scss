@@ -1,4 +1,4 @@
-@mixin gradient($opacity:0.9){
+@mixin gradient ($opacity: 0.9){
     background-image: linear-gradient(
       to top,
       #9356dc,
@@ -6,5 +6,8 @@
       #cf64dc,
       #e86edb,
       #ff79da
-    );
+    ) 
 }
+;
+
+

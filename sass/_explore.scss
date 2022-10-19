@@ -1,6 +1,9 @@
-@import "./utils/_box-shadow.scss";
-@import "./utils/_linear-gradient.scss";
+@import "./utils/box-shadow.scss";
+@import "./utils/linear-gradient.scss";
 @import "./utils/colors";
+@import "./components/baseBtn.scss";
+@import "./utils/btnBefore.scss";
+@import "./utils/btnHover.scss";
 .explore {
   text-align: center;
   padding: 2rem;
@@ -14,20 +17,15 @@
     margin:1.5rem 0;
   }
   & a {
-    color:$background;
-    font-weight: 400;
-    font-size: 1.2rem;
-    background-color:$background-primary;
-    padding: 0.50rem 1rem;
-    border: 0;
-    border-radius: 20px;
-    margin-top: 10px;
-    cursor: pointer;
-    @include basic-shadow;
-    @include gradient;
+  @include baseBtn;
   }
-  & button:hover {
-    transform: scale(1.05);
-    opacity: 0.9;
+  
+  & a::before {
+    @include btnBefore;
   }
+  
+  & a:hover {
+   @include btnHover;
+  }
+  
 }
