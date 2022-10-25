@@ -1,9 +1,5 @@
-@import "./utils/box-shadow.scss";
-@import "./utils/linear-gradient.scss";
-@import "./utils/colors";
+@import "./utils/mixins.scss";
 @import "./components/baseBtn.scss";
-@import "./utils/btnBefore.scss";
-@import "./utils/btnHover.scss";
 .explore {
   text-align: center;
   padding: 2rem;
@@ -28,4 +24,31 @@
    @include btnHover;
   }
   
+}
+
+.loader{
+  $animation-duration:2s;
+  background-color:#ffffff;
+  display: grid;
+  place-items: center;
+  height:100vh;
+  position: fixed;
+  inset:0;
+  z-index:2;
+  opacity:0.9;
+  animation:loader 1s $animation-duration forwards;
+  transform-origin: top;
+  &::after{
+    content: "";
+    height: 100px;
+    width:100px;
+    border: 5px solid transparent;
+    border-radius: 50%;
+    border-top: 5px solid $primary;
+    border-left: 4px solid $secondary;
+    border-right:3px solid $tertiary ;
+    border-bottom:2px solid $hoverbg ;
+    animation:spin $animation-duration infinite ease-in-out;
+    animation-iteration-count: 2;
+  }
 }

@@ -1,0 +1,91 @@
+
+// Arguments given to the mixin heart
+@mixin heart ($opacity:1, $font-weight:400,$color:inherit){
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font: var(--fa-font-solid);
+  content: "\f004";
+  font-size: 2rem;
+  position: absolute;
+  transform: translateX(120%);
+  font-weight:$font-weight;
+  color: $color;
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: $opacity;
+  transition: all 200ms ease-in-out;
+}
+// Mixin animated-heart
+
+@mixin animated-heart {
+   &::before{
+   @include heart;
+   position: absolute;
+  top: 0;
+  right:0;
+  }
+ &::after{
+  position: relative;
+  right:0;
+  @include heart($opacity: 0, $font-weight: 900, $color: transparent);
+  @include gradient;
+ }
+ &:hover::after{
+   opacity:1; 
+}
+}
+
+// Colors
+
+$background: #fff;
+$background-primary: #686868;
+$background-secondary: #f6f6f6;
+$background-tertiary: #353535;
+$primary: #9356dc;
+$secondary: #ff79da;
+$tertiary: #99e2d0;
+$hoverbg: #f6e6fa;
+
+// Variable height
+$tuto-height:1rem;
+
+// Linear gradient
+
+@mixin gradient ($opacity: 0.9){
+  background-image: linear-gradient(
+    to top,
+    #9356dc,
+    #b35cdc,
+    #cf64dc,
+    #e86edb,
+    #ff79da
+  ) 
+}
+;
+
+// Box shadow
+@mixin basic-shadow {
+  box-shadow: 0.2rem 0.2rem 5px #64616168;   
+}
+
+// btnHover
+
+@mixin btnHover{
+  opacity: 0.8;
+  box-shadow: 0.2rem 0.3rem 10px #64616168;
+}
+
+// BtnBefore
+@mixin btnBefore {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  transition:250ms ;
+  opacity: 1;
+ 
+}
