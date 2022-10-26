@@ -34,9 +34,9 @@
   height:100vh;
   position: fixed;
   inset:0;
-  z-index:2;
+  z-index:100;
   opacity:0.9;
-  animation:loader 1s $animation-duration forwards;
+  animation:loader 3s $animation-duration forwards;
   transform-origin: top;
   &::after{
     content: "";

@@ -19,7 +19,7 @@ main {
   text-align: center;
   box-shadow: 0.2rem 0.2rem 5px #64616168;
   position: relative;
-  z-index: 1000; }
+  z-index: 1; }
 
 .header__logo1 {
   padding: 1.5rem;
@@ -118,9 +118,9 @@ main {
   height: 100vh;
   position: fixed;
   inset: 0;
-  z-index: 2;
+  z-index: 100;
   opacity: 0.9;
-  animation: loader 1s 2s forwards;
+  animation: loader 3s 2s forwards;
   transform-origin: top; }
   .loader::after {
     content: "";
@@ -206,21 +206,24 @@ main {
     @media (min-width: 1024px) {
       .restaurants .cards {
         grid-template-columns: repeat(2, 1fr); } }
-  .restaurants .cardAnchor, .restaurants .card {
+  .restaurants .cardAnchor,
+  .restaurants .card {
     background-color: #fff;
     border-radius: 1rem;
     position: relative;
     text-decoration: none;
     color: inherit;
     display: block; }
-    .restaurants .cardAnchor img, .restaurants .card img {
+    .restaurants .cardAnchor img,
+    .restaurants .card img {
       height: 12rem;
       width: 100%;
       border: 0 solid transparent;
       border-radius: 1rem 1rem 0 0;
       box-shadow: none;
       object-fit: cover; }
-    .restaurants .cardAnchor .card__badge, .restaurants .card .card__badge {
+    .restaurants .cardAnchor .card__badge,
+    .restaurants .card .card__badge {
       background-color: #99e2d0;
       color: #1b6150;
       padding: 0.5rem;
@@ -228,50 +231,77 @@ main {
       position: absolute;
       top: 1rem;
       right: 0.75rem; }
-    .restaurants .cardAnchor .cardTitle, .restaurants .card .cardTitle {
+    .restaurants .cardAnchor .cardTitle,
+    .restaurants .card .cardTitle {
       text-decoration: none;
       color: #000; }
-    .restaurants .cardAnchor .card__subtitle, .restaurants .card .card__subtitle {
+    .restaurants .cardAnchor .card__title,
+    .restaurants .card .card__title {
+      position: relative; }
+      .restaurants .cardAnchor .card__title::before,
+      .restaurants .card .card__title::before {
+        display: inline-block;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        font: var(--fa-font-solid);
+        content: "\f004";
+        font-size: 2rem;
+        position: absolute;
+        transform: translateX(180%);
+        font-weight: 400;
+        color: inherit;
+        background-clip: text;
+        -webkit-background-clip: text;
+        opacity: 1;
+        transition: all 200ms ease-in-out;
+        position: absolute;
+        top: 0;
+        right: 0; }
+      .restaurants .cardAnchor .card__title::after,
+      .restaurants .card .card__title::after {
+        position: relative;
+        right: 0;
+        display: inline-block;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
+        font: var(--fa-font-solid);
+        content: "\f004";
+        font-size: 2rem;
+        position: absolute;
+        transform: translateX(180%);
+        font-weight: 900;
+        color: transparent;
+        background-clip: text;
+        -webkit-background-clip: text;
+        opacity: 0;
+        transition: all 200ms ease-in-out;
+        background-image: linear-gradient(to top, #9356dc, #b35cdc, #cf64dc, #e86edb, #ff79da); }
+      .restaurants .cardAnchor .card__title:hover::after,
+      .restaurants .card .card__title:hover::after {
+        opacity: 1; }
+    .restaurants .cardAnchor .card__title::before,
+    .restaurants .card .card__title::before {
+      position: absolute;
+      right: 65px; }
+    .restaurants .cardAnchor .card__title::after,
+    .restaurants .card .card__title::after {
+      position: absolute;
+      right: 65px; }
+    .restaurants .cardAnchor .card__subtitle,
+    .restaurants .card .card__subtitle {
       background-color: #fff;
       border-radius: 1rem;
       position: relative;
       text-decoration: none; }
-    .restaurants .cardAnchor .card__content, .restaurants .card .card__content {
+    .restaurants .cardAnchor .card__content,
+    .restaurants .card .card__content {
       flex: 1; }
-    .restaurants .cardAnchor .card__footer, .restaurants .card .card__footer {
+    .restaurants .cardAnchor .card__footer,
+    .restaurants .card .card__footer {
       padding: 1rem;
       position: relative;
       display: flex;
       align-items: center; }
-  .restaurants .menu__btn {
-    height: 2rem;
-    width: 2rem;
-    border: 0 solid transparent;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    position: relative;
-    background-color: #000; }
-  .restaurants i {
-    height: 2rem;
-    width: 2rem;
-    font-size: 2rem;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center; }
-  .restaurants .fas {
-    transition: all 200ms ease-in-out;
-    color: transparent; }
-    .restaurants .fas:hover {
-      background: linear-gradient(90deg, #9356dc 0%, rgba 255, 121, 218, 1 100%);
-      background-clip: text;
-      -webkit-text-fill-color: transparent; }
-  .restaurants .far {
-    background: #f6f6f6;
-    opacity: 1; }
 
 .footer {
   background-color: #353535; }
@@ -408,7 +438,7 @@ main {
     content: "\f004";
     font-size: 2rem;
     position: absolute;
-    transform: translateX(120%);
+    transform: translateX(180%);
     font-weight: 400;
     color: inherit;
     background-clip: text;
@@ -428,7 +458,7 @@ main {
     content: "\f004";
     font-size: 2rem;
     position: absolute;
-    transform: translateX(120%);
+    transform: translateX(180%);
     font-weight: 900;
     color: transparent;
     background-clip: text;
