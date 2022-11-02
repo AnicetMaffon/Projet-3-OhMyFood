@@ -89,3 +89,30 @@ $tuto-height:1rem;
   opacity: 1;
  
 }
+// Loader
+@mixin loader {
+  $animation-duration:2s;
+  background-color:#ffffff;
+  display: grid;
+  place-items: center;
+  height:100vh;
+  position: fixed;
+  inset:0;
+  z-index:100;
+  opacity:0.9;
+  animation:loader 3s $animation-duration forwards;
+  transform-origin: top;
+  &::after{
+    content: "";
+    height: 100px;
+    width:100px;
+    border: 5px solid transparent;
+    border-radius: 50%;
+    border-top: 5px solid $primary;
+    border-left: 4px solid $secondary;
+    border-right:3px solid $tertiary ;
+    border-bottom:2px solid $hoverbg ;
+    animation:spin $animation-duration infinite ease-in-out;
+    animation-iteration-count: 2;
+  }
+}
