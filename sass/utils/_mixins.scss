@@ -116,3 +116,15 @@ $tuto-height:1rem;
     animation-iteration-count: 2;
   }
 }
+//Mixin menuItem
+@mixin appear {
+   //To replace the list of delay items
+   @for $i from 1 through 3 {
+    &:nth-child(#{$i}) {
+      animation-delay: 100ms * $i;
+    }
+    animation: appear 2s;
+    animation-timing-function: cubic-bezier(0.5, 1.6, 0.42, 0.6);
+    animation-fill-mode: both;
+}
+}

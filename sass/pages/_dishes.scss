@@ -76,13 +76,8 @@
     bottom: 0;
   }
 
-  .menuItem {
-    //To replace the list of delay items
-    @for $i from 1 through 3 {
-      &:nth-child(#{$i}) {
-        animation-delay: 100ms * $i;
-      }
-    }
+  .menuItem { 
+    @include appear;
     background-color: $background;
     display: flex;
     border-radius: 0.75rem;
@@ -92,9 +87,7 @@
     box-shadow: 0.25rem 0.25rem 1rem rgba(106, 105, 105, 0.1);
     cursor: pointer;
     max-width: 100%;
-    animation: appear 2s;
-    animation-timing-function: cubic-bezier(0.5, 1.6, 0.42, 0.6);
-    animation-fill-mode: both;
+   
   }
 
   .menuItem__header {
